@@ -23,11 +23,15 @@ const handleUserInput = input => {
   if (input === 'd') { 
     connection.write("Move: right");
   }
+
+  if (input === 'x') { 
+    connection.write("LETS GOOOOOOO!");
+  }
 };
 
 const setupInput = (conn) => {
-  connection = conn;
   const stdin = process.stdin;
+  connection = conn;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
