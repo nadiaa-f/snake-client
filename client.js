@@ -12,6 +12,7 @@ const connect = function () {
   
   conn.on("connect", (data) => {
     console.log("connected to server");
+    conn.write("Name: FSN");
   })
 
   conn.on("data", (data) => {
